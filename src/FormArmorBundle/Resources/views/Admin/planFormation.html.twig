@@ -1,0 +1,43 @@
+{% extends "FormArmorBundle::admin_layout.html.twig" %}
+{% block FormArmor_body %}
+	<h2>AFFICHAGE DES PLANS DE FORMATION</h2>
+	<table class="table">
+		<thead>
+		<tr>
+			<th>Identifiant</th>
+			<th>Client</th>
+			<th>Formation</th>
+			<th>Effectuer</th>
+      <th>Option</th>
+		</tr>
+		</thead>
+		<tbody>
+			{% for planFormation in lesPlansFormations %}
+				<tr {# si le nombre de passages dans la boucle est pair #} {% if loop.index is even %} class="success" {% else %} class="info" {% endif %}>
+					<td>{{planFormation.id}}</td>
+					<td>{{planFormation.client.nom}}</td>
+					<td>{{planFormation.formation.libelle}} ({{planFormation.formation.niveau}})</td>
+          <td> {% if planFormation.effectue == 0 %} Non {% else %} Oui {% endif %}</td>
+					<td><a href="{{ path('form_armor_admin_planFormation_modif', {'id': planFormation.id}) }}">Modifier</a></td>
+					<td><a href="{{ path('form_armor_admin_planFormation_supp', {'id': planFormation.id}) }}">Supprimer</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<ul class="pagination">
+		{# On utilise la fonction range(a, b) qui crée un tableau de valeurs entre a et b #}
+		{% for p in range(1, nbPages) %}
+			<li{% if p == page %} class="active"{% endif %}>
+				<a href="{{ path('form_armor_admin_planFormation', {'page': p}) }}">{{ p }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+
+	<script>
+		$(function() {
+			$('#menu5').attr('class', 'active');
+		});
+	</script>
+
+{% endblock %}
