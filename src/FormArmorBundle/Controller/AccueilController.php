@@ -11,5 +11,6 @@ class AccueilController extends Controller
         return $this->render('FormArmorBundle:Accueil:index.html.twig');
         //mehdi fait une midif 4
         // Modif 5
+        //dfgdfgdfgdf
     }
 }
