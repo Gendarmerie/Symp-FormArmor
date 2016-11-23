@@ -1,5 +1,1 @@
-test 1
-<<<<<<< HEAD
-=======
-2
->>>>>>> d2d2e8a0cfa16282c4e3c792882fe37a4116a685
+J'essaye de pull (modifié en dur)
