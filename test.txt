@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-﻿J'essaye de pull (modifié en dur)
-Modif1
-=======
-test 1
-dwvfxbf
->>>>>>> 33b63952f3050744b1043bcef412e0fe2e942544
