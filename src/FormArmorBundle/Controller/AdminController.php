@@ -52,6 +52,7 @@ class AdminController extends Controller
           $session = new Session();
           //$session->start();
           // set and get session attributes
+          //Bientôt avec FOSuserBundle
           $session->set('login', $nom);
 					return $this->render('FormArmorBundle:Admin:accueil.html.twig');
 				}
