@@ -9,6 +9,6 @@ class AccueilController extends Controller
     public function indexAction()
     {
         return $this->render('FormArmorBundle:Accueil:index.html.twig');
-        //test 2
+        //mehdi fait une midif
     }
 }
